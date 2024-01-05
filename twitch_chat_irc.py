@@ -211,26 +211,5 @@ if __name__ == '__main__':
 			message_limit=args.message_limit,
 			output=args.output)
 
-		# if(args.output != None):
-		# 	if(args.output.endswith('.json')):
-		# 		with open(args.output, 'w') as fp:
-		# 			json.dump(messages, fp)
-		# 	elif(args.output.endswith('.csv')):
-		# 		with open(args.output, 'w', newline='',encoding='utf-8') as fp:
-		# 			fieldnames = []
-		# 			for message in messages:
-		# 				fieldnames+=message.keys()
-
-		# 			if(len(messages)>0):
-		# 				fc = csv.DictWriter(fp,fieldnames=list(set(fieldnames)))
-		# 				fc.writeheader()
-		# 				fc.writerows(messages)
-		# 	else:
-		# 		f = open(args.output,'w', encoding='utf-8')
-		# 		for message in messages:
-		# 			print('['+message['tmi-sent-ts']+']',message['display-name']+':',message['message'],file=f)
-		# 		f.close()
-
-			# print('Finished writing',len(messages),'messages to',args.output)
 		
 	twitch_chat_irc.close_connection()
